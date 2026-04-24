@@ -1,0 +1,122 @@
+{% extends 'userapp/master.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    .eco-score-section {
+        background-image: url({% static 'userapp/img/eco.jpg' %}) !important;
+    }
+</style>
+
+<!-- EcoScore Page Header Start -->
+<div class="container-fluid page-header d-flex align-items-center justify-content-center" style="min-height: 550px;">
+    <div class="text-center">
+        <h1 class="display-1 text-uppercase text-white mb-3">
+            EcoScore
+        </h1>
+
+        <div class="d-inline-flex text-white">
+            <h6 class="text-uppercase m-0">
+                <a class="text-white" href="">Home</a>
+            </h6>
+            <h6 class="text-body m-0 px-3">/</h6>
+            <h6 class="text-uppercase text-body m-0">
+                EcoScore
+            </h6>
+        </div>
+    </div>
+</div>
+<!-- EcoScore Page Header End -->
+
+
+<!-- Your Environmental Impact Start -->
+<div class="container-fluid eco-score-section p-0 mt-5 d-flex align-items-center justify-content-center" style="min-height: 550px; 
+            background: 
+            center center / cover no-repeat;">
+
+    <div class="text-center text-white w-100">
+
+        <h1 class="display-4 text-uppercase mb-5 text-dark">
+            🌱 Your Environmental Impact
+        </h1>
+
+        <div class="row justify-content-center mx-0">
+
+            <!-- Total Rides -->
+            <div class="col-md-3 mx-3 mb-4">
+                <div class="p-5 border border-light rounded h-100">
+                    <i class="fa-solid fa-bicycle fa-3x text-warning mb-4"></i>
+                    <h2 class="display-4 text-success">{{ total_rides }}</h2>
+                    <p class="text-uppercase">Total Rides</p>
+                </div>
+            </div>
+
+            <!-- Total Distance -->
+            <div class="col-md-3 mx-3 mb-4">
+                <div class="p-5 border border-light rounded h-100">
+                    <i class="fa-solid fa-road fa-3x text-info mb-4"></i>
+                    <h2 class="display-4">
+                        <span class="text-success">{{ total_distance }} km</span>
+                    </h2>
+                    <p class="text-uppercase">Total Distance</p>
+                </div>
+            </div>
+
+            <!-- CO2 Saved -->
+            <div class="col-md-3 mx-3 mb-4">
+                <div class="p-5 border border-light rounded h-100">
+                    <i class="fa-solid fa-leaf fa-3x text-success mb-4"></i>
+                    <h2 class="display-4">
+                        <span class="text-success">{{ co2_saved }} kg</span>
+                    </h2>
+                    <p class="text-uppercase">Total CO₂ Saved</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-4">
+            <h4 class="text-white">
+                🎉 You saved {{ monthly_co2 }} kg CO₂ this month!
+            </h4>
+        </div>
+
+    </div>
+
+</div>
+<!-- Your Environmental Impact End -->
+
+<!-- Vendor Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="owl-carousel vendor-carousel">
+            <div class="bg-light p-4">
+                <img src="{% static 'userapp/img/vendor-1.png' %}" alt="">
+            </div>
+            <div class="bg-light p-4">
+                <img src="{% static 'userapp/img/vendor-2.png' %}" alt="">
+            </div>
+            <div class="bg-light p-4">
+                <img src="{% static 'userapp/img/vendor-3.png' %}" alt="">
+            </div>
+            <div class="bg-light p-4">
+                <img src="{% static 'userapp/img/vendor-4.png' %}" alt="">
+            </div>
+            <div class="bg-light p-4">
+                <img src="{% static 'userapp/img/vendor-5.png' %}" alt="">
+            </div>
+            <div class="bg-light p-4">
+                <img src="{% static 'userapp/img/vendor-6.png' %}" alt="">
+            </div>
+            <div class="bg-light p-4">
+                <img src="{% static 'userapp/img/vendor-7.png' %}" alt="">
+            </div>
+            <div class="bg-light p-4">
+                <img src="{% static 'userapp/img/vendor-8.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Vendor End -->
+
+{% endblock %}
